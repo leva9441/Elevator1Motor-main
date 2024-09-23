@@ -3,17 +3,17 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.Command;
 
 import frc.robot.Constants.ElevatorConstants;
-import frc.robot.subsystems.ElevatorSubsystem;
+import frc.robot.subsystems.Elevator1Motor;
 
 import edu.wpi.first.math.MathUtil;
 
 import java.util.function.DoubleSupplier;
 
 public class TeleopElevator extends Command {
-    private ElevatorSubsystem e_ElevatorSubsystem;
+    private Elevator1Motor e_ElevatorSubsystem;
     private DoubleSupplier speedSup;
 
-    public TeleopElevator(ElevatorSubsystem e_ElevatorSubsystem, DoubleSupplier speedSup) {
+    public TeleopElevator(Elevator1Motor e_ElevatorSubsystem, DoubleSupplier speedSup) {
         this.e_ElevatorSubsystem = e_ElevatorSubsystem;
         addRequirements(e_ElevatorSubsystem);
 

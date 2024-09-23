@@ -4,14 +4,14 @@ import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj2.command.Command;
 
 import frc.robot.Constants.ElevatorConstants;
-import frc.robot.subsystems.ElevatorSubsystem;
+import frc.robot.subsystems.Elevator1Motor;
 
 public class PIDElevator extends Command {
-    private ElevatorSubsystem e_ElevatorSubsystem;
+    private Elevator1Motor e_ElevatorSubsystem;
     private double targetPosition;
     private PIDController e_PIDController = new PIDController(ElevatorConstants.elevatorP, ElevatorConstants.elevatorI, ElevatorConstants.elevatorD);
 
-    public PIDElevator(ElevatorSubsystem e_ElevatorSubsystem, double targetPosition) {
+    public PIDElevator(Elevator1Motor e_ElevatorSubsystem, double targetPosition) {
         this.e_ElevatorSubsystem = e_ElevatorSubsystem;
         addRequirements(e_ElevatorSubsystem);
 
@@ -26,7 +26,7 @@ public class PIDElevator extends Command {
 
     @Override
     public void execute() {
-        double newElevatorSpeed = e_PIDController.calculate(e_ElevatorSubsystem.getAverageElevatorMotorPosition());
+        double newElevatorSpeed = e_PIDController.calculate(e_ElevatorSubsystem.getElevatorMotorPosition());
         e_ElevatorSubsystem.setElevatorMotorSpeeds(newElevatorSpeed, false);
     }
 

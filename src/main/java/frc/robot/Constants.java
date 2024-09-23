@@ -13,22 +13,16 @@ public final class Constants {
   /* All constants related to ElevatorSubsystem.java and TeleopElevator.java */
   public static class ElevatorConstants {
     /* The constants below are used in ElevatorSubsystem.java */
-    public static final int leftElevatorMotorID = 1;
-    public static final int rightElevatorMotorID = 2;
+    public static final int ElevatorMotorID = 1;
 
-    public static final boolean leftElevatorMotorInvert = true;
-    public static final boolean rightElevatorMotorInvert = true;
+    public static final boolean ElevatorMotorInvert = true;
 
-    public static final double leftElevatorMotorOutput = 0.25;
-    public static final double rightElevatorMotorOutput = 0.25;
+    public static final double ElevatorMotorOutput = 0.25;
 
-    public static final double leftElevatorMotorMaxPosition = 36000;
-    public static final double leftElevatorMotorMinPosition = -36000;
-    public static final double rightElevatorMotorMaxPosition = 36000;
-    public static final double rightElevatorMotorMinPosition = -36000;
+    public static final double ElevatorMotorMaxPosition = 36000;
+    public static final double ElevatorMotorMinPosition = -36000;
 
-    public static final double leftElevatorMotorStartPosition = 0;
-    public static final double rightElevatorMotorStartPosition = 0;
+    public static final double ElevatorMotorStartPosition = 0;
 
     public static final double maxElevatorMotorVoltage = 6;
 

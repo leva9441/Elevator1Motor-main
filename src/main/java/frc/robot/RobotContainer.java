@@ -27,7 +27,7 @@ public class RobotContainer {
   private final JoystickButton w_rotateElevatorBackward = new JoystickButton(weapons, XboxController.Button.kX.value);
 
   /* Subsystems */
-  private final ElevatorSubsystem e_ElevatorSubsystem = new ElevatorSubsystem();
+  private final Elevator1Motor e_ElevatorSubsystem = new Elevator1Motor();
 
   public RobotContainer() {
 
@@ -42,9 +42,9 @@ public class RobotContainer {
   }
 
   private void configureBindings() {
-    w_runElevatorPID.onTrue(new PIDElevator(e_ElevatorSubsystem, 1800).withTimeout(5));
-    w_rotateElevatorForward.onTrue(new PIDElevator(e_ElevatorSubsystem, e_ElevatorSubsystem.getAverageElevatorMotorPosition() + 1800).withTimeout(5));
-    w_rotateElevatorBackward.onTrue(new PIDElevator(e_ElevatorSubsystem, e_ElevatorSubsystem.getAverageElevatorMotorPosition() - 1800).withTimeout(5));
+    //w_runElevatorPID.onTrue(new PIDElevator(e_ElevatorSubsystem, 1800).withTimeout(5));
+    //w_rotateElevatorForward.onTrue(new PIDElevator(e_ElevatorSubsystem, e_ElevatorSubsystem.getElevatorMotorPosition() + 1800).withTimeout(5));
+    //w_rotateElevatorBackward.onTrue(new PIDElevator(e_ElevatorSubsystem, e_ElevatorSubsystem.getElevatorMotorPosition() - 1800).withTimeout(5));
   }
 
   public Command getAutonomousCommand() {
